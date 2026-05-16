@@ -1,1 +1,151 @@
-# sorry-babe
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  background: #fff5f7;
+  color: #2b2b2b;
+}
+
+.box {
+  max-width: 420px;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 24px;
+  color: #d94b6a;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 90px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: 1px solid #d94b6a;
+  background: transparent;
+  color: #d94b6a;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d94b6a;
+  color: white;
+}
+
+.small {
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+}
+
+#dog {
+  margin-bottom: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+  <img id="dog" src="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif" width="150">
+
+  <h1 id="title">Hey KANXIIII</h1>
+
+  <p id="msg">
+    I just want to say this properly… without ego, without noise.
+    Just honestly from me to you 💗
+  </p>
+
+  <button onclick="next()">continue</button>
+
+  <div class="small" id="extra"></div>
+
+</div>
+
+<script>
+let step = 0;
+
+function next() {
+
+  let dog = document.getElementById("dog");
+
+  if (step === 0) {
+
+    // 🥺 1st page
+    dog.src = "https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif";
+    document.getElementById("title").innerText = "I’m sorry…";
+    document.getElementById("msg").innerText =
+      "I know I hurt you, and I truly regret it. You didn’t deserve that from me.";
+
+    document.getElementById("extra").innerText =
+      "I never meant to hurt you…";
+
+    step = 1;
+  } 
+  else if (step === 1) {
+
+    // 💭 2nd page
+    dog.src = "https://media.giphy.com/media/9d3LQ6TdV2Flo8ODTU/giphy.gif";
+
+    document.getElementById("title").innerText = "One honest thing…";
+    document.getElementById("msg").innerText =
+      "I’ve been thinking about our sweet talks and our future plans. Those moments meant more to me than I showed.";
+
+    document.getElementById("extra").innerText =
+      "I miss how natural everything felt between us.";
+
+    step = 2;
+  } 
+  else if (step === 2) {
+
+    // ❤️ 3rd page
+    dog.src = "https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif";
+
+    document.getElementById("title").innerText = "For you ❤️";
+    document.getElementById("msg").innerText =
+      "I love you. Not in a loud way… just in a real, calm way that stays. And I also respect your space and feelings.";
+
+    document.getElementById("extra").innerText =
+      "No pressure. I just wanted you to know the truth.";
+
+    step = 3;
+  } 
+  else {
+
+    // 💞 4th page
+    dog.src = "https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif";
+
+    document.getElementById("title").innerText = "For you ❤️";
+    document.getElementById("msg").innerText =
+      "I love you. Not in a loud way… just in a real, calm way that stays. And I also respect your space and feelings.";
+
+    document.getElementById("extra").innerText =
+      "No pressure. I just wanted you to know the truth.";
+
+    document.querySelector("button").style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
